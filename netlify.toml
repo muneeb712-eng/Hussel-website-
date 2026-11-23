@@ -1,0 +1,11 @@
+# Plain static HTML site: no framework, no package manager, no build step.
+[build]
+  publish = "."
+  command = ""
+
+# The homepage file is named "Index.html" (capital I). Netlify paths are
+# case-sensitive, so "/" would not find it. Serve it at the site root.
+[[redirects]]
+  from = "/"
+  to = "/Index.html"
+  status = 200
